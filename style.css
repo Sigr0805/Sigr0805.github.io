@@ -8,7 +8,7 @@ header{
   height: 100px;
   padding: 20px;
   margin:   ;
-  //background-color: yellow;
+  background-color: yellow;
 }
 
 header h1 {
@@ -49,34 +49,94 @@ margin-left: 30%;
 
 main{
   grid-area: main;
-  height: 800px;
+
   padding: 20px;
   margin: ;
   background-color: pink;
+  display: flex;
+}
+#början {
+  display: flex;
+  background-color: purple;
+  padding: 3px;
+  margin: 6px;
+  border-radius: 10px;
+}
+
+#början p{
+margin: 3%;
 }
 
 .höger{
   grid-area: höger;
-  height: 800px;
+
   padding: 20px;
   margin: ;
   background-color: grey;
+  display: flex;
+  flex-direction: column;
+}
+#mitten {
+  display: flex;
+  background-color: purple;
+  padding: 3px;
+  margin: 6px;
+  border-radius: 10px;
+}
+
+#mitten p{
+margin: 3%;
 }
 nav{
   grid-area: nav;
-  height: 800px;
   padding: 20px;
   display: grid;
 
 
   background-color: blue;
 }
+}
+#Varför-oss{
+  display: flex;
+  width: 25%;
+  background-color: blue;
+  padding: 3px;
+  margin: 6px;
+  border-radius: 10px;
+}
+#Varför-oss h3{
+margin: 3%;
+}
+#Kontakta-oss{
+  display: flex;
+  width: 25%;
+  background-color: blue;
+  padding: 3px;
+  margin: 6px;
+  border-radius: 10px;
+
+}
+#Kontakta-oss h3{
+margin: 3%;
+}
 footer{
   grid-area: footer;
-  height: 70px;
+
   padding: 20px;
   margin: ;
   background-color: red;
+  display: flex;
+}
+#slut {
+  display: flex;
+  background-color: purple;
+  padding: 3px;
+  margin: 6px;
+  border-radius: 10px;
+}
+
+#slut p{
+margin: 3%;
 }
 
 .grid-container {
@@ -87,4 +147,322 @@ footer{
     "menu menu menu menu menu menu"
     "nav main main main höger höger"
     "footer footer footer footer footer footer";
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+
+
+    header{
+      grid-area: header;
+      height: 100px;
+      padding: 20px;
+      margin:   ;
+      background-color: yellow;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+    menu{
+    grid-area: menu;
+    margin: 0;
+    padding: 0;
+    background-color: purple;
+    display: flex;
+    flex-direction: row;
+
+    }
+    #start-sida{
+      display: flex;
+      width: 40%;
+      background-color: blue;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+    }
+    #start-sida h3{
+    margin-left: : 30%;
+    }
+    #Om-oss{
+      display: flex;
+      width: 40%;
+      background-color: blue;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+
+    }
+    #Om-oss h3{
+    margin-left: : 30%;
+    }
+
+    main{
+      grid-area: main;
+      padding: 20px;
+      margin: ;
+      background-color: pink;
+    }
+    #början {
+      display: flex;
+      background-color: purple;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+    }
+
+    #början p{
+    margin: 3%;
+    }
+
+    .höger{
+      grid-area: höger;
+      padding: 20px;
+      margin: ;
+      background-color: grey;
+      flex-direction: column;
+    }
+    #mitten {
+      display: flex;
+      background-color: purple;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+    }
+
+    #mitten p{
+    margin: 3%;
+    }
+    nav{
+      grid-area: nav;
+      margin: 0;
+      padding: 0;
+      background-color: blue;
+      display: flex;
+      flex-direction: row;
+
+
+
+    }
+    #Varför-oss{
+      display: flex;
+      width: 40%;
+      background-color: purple;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+    }
+    #Varför-oss h3{
+    margin-left: 30%;
+    }
+    #Kontakta-oss{
+      display: flex;
+      width: 40%;
+      background-color: purple;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+
+    }
+    #Kontakta-oss h3{
+    margin-left: 30%;
+    }
+    footer{
+      grid-area: footer;
+      padding: 20px;
+      margin: ;
+      background-color: red;
+      display: flex;
+    }
+    #slut {
+      display: flex;
+      background-color: purple;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+    }
+
+    #slut p{
+    margin: 3%;
+    }
+
+    .grid-container {
+      height:100%;
+      display: grid;
+      grid-template-areas:
+        "header header header header header header"
+        "menu menu menu menu menu menu"
+        "nav nav nav nav nav nav"
+        "main main main main main main"
+        "höger höger höger höger höger höger"
+        "footer footer footer footer footer footer";
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+
+
+    header{
+      grid-area: header;
+      height: 100px;
+      padding: 20px;
+      margin:   ;
+      background-color: yellow;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+    menu{
+    grid-area: menu;
+    margin: 0;
+    padding: 0;
+    background-color: purple;
+    display: flex;
+    flex-direction: row;
+
+    }
+    #start-sida{
+      display: flex;
+      width: 50%;
+      background-color: blue;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+    }
+    #start-sida h3{
+    margin-left: 30%;
+    }
+    #Om-oss{
+      display: flex;
+      width: 50%;
+      background-color: blue;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+
+    }
+    #Om-oss h3{
+    margin-left: 30%;
+    }
+
+    main{
+      grid-area: main;
+
+      padding: 20px;
+      margin: ;
+      background-color: pink;
+      display: flex;
+    }
+    #början {
+    display: flex;
+
+    background-color: purple;
+    padding: 3px;
+    margin: 6px;
+    border-radius: 10px;
+
+
+    }
+    #början p{
+    margin: 3%;
+    }
+
+
+    .höger{
+      grid-area: höger;
+      padding: 20px;
+      margin: ;
+      background-color: grey;
+      display: flex;
+      flex-direction: column;
+    }
+    #mitten {
+    display: flex;
+
+    background-color: purple;
+    padding: 3px;
+    margin: 6px;
+    border-radius: 10px;
+
+
+    }
+    #mitten p{
+    margin: 3%;
+    }
+    nav{
+      grid-area: nav;
+      margin: 0;
+      padding: 0;
+      background-color: blue;
+      display: flex;
+      flex-direction: row;
+
+
+
+    }
+    #Varför-oss{
+      display: flex;
+      width: 50%;
+      background-color: purple;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+    }
+    #Varför-oss h3{
+    margin-left: 30%;
+    }
+    #Kontakta-oss{
+      display: flex;
+      width: 50%;
+      background-color: purple;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+
+    }
+    #Kontakta-oss h3{
+    margin-left: 30%;
+    }
+    footer{
+      grid-area: footer;
+      padding: 20px;
+      margin: ;
+      background-color: red;
+      display: flex;
+    }
+    #slut {
+      display: flex;
+      background-color: purple;
+      padding: 3px;
+      margin: 6px;
+      border-radius: 10px;
+    }
+
+    #slut p{
+    margin: 3%;
+    }
+
+    .grid-container {
+      height:100%;
+      display: grid;
+      grid-template-areas:
+        "header header header header header header"
+        "menu menu menu menu menu menu"
+        "nav nav nav nav nav nav"
+        "main main main main main main"
+        "höger höger höger höger höger höger"
+        "footer footer footer footer footer footer";
+    }
+
+
+
+
 }
