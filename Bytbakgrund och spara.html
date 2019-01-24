@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+
+       var colorpicker=document.createElement("INPUT");
+       colorpicker.setAttribute("type", "color");
+       document.body.appendChild(colorpicker);
+
+
+      var button = document.createElement("button");
+      button.innerHTML="Ändra";
+      var body=document.getElementsByTagName("body")[0];
+      body.appendChild(button);
+
+      button.addEventListener("click", function(){
+        var x=colorpicker.value;
+        document.body.style.background = x;
+
+      localStorage.setItem("background", x);
+
+
+      })
+      document.body.style.background = localStorage.getItem("background");
+
+
+
+    </script>
+  </body>
+</html>

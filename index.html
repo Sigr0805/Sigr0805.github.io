@@ -6,11 +6,22 @@
     <meta name="google-site-verification" content="2A_qSPHTb_gqQ5pp0VvwHiy8MX9Fh2yeajNBr6fyKR8" />
     <meta name="description" content="Vill du göra en webbsida? Låt oss göra din egen hemsida så ska du få se att den blir toppen!" />
     <meta charset="utf-8">
-    <title></title>
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <!-- Fotorama -->
+    <link href="css/fotorama.css" rel="stylesheet">
+    <script src="js/fotorama.js"></script>
+
+    <!-- Just don’t want to repeat this prefix in every img[src] -->
+    <base href="http://s.fotorama.io/okonechnikov/">
 
     <title>Vi gör Webbsidor i världs klass</title>
 
- <link rel="stylesheet" href="style.css">
 
   </head>
   <body>
@@ -19,9 +30,7 @@
         <h1>
           Vänersborgs Webbyrå
         </h1>
-        <p>
-          Webbsites made with lower quality and performance!? Sign me up!!!
-        </p>
+
       </header>
       <menu>
         <section id="start-sida">
@@ -49,6 +58,18 @@
 
 
           </p>
+
+
+          <div class="fotorama" data-width="700" data-ratio="700/467" data-max-width="100%">
+            <img src="1-lo.jpg">
+            <img src="2-lo.jpg">
+            <img src="9-lo.jpg">
+            <img src="6-lo.jpg">
+            <img src="5-lo.jpg">
+          </div>
+
+          <p>Photos <a href="http://okonet.ru/">by Andrey Okonetchnikov</a></p>
+
         </section>
 
       </main>
@@ -70,5 +91,12 @@
 
       </footer>
     </div>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		  <script type="text/javascript" src="js/slimbox2.js"></script>
+
+      <p>
+        <a href="example.jpg" rel="lightbox" title="Beautiful, isn't it?">Click here</a> to view a picture inside Slimbox.
+      </p>
+
   </body>
 </html>
