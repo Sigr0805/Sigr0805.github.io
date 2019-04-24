@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <script type="text/javascript">
+
+
+
+
+	$(document).ready(function() {
+	  var knapp=false;
+		$("#Phone").keyup(function(){
+
+			var re = /^[0]{2}[0-9]{6,15}$/;    //måste börja med 2 st nollor, sedan 0-9 minst 6st max 15 där efter får de ej finnas något
+
+			var OK = re.exec($('#Phone').val());
+
+			if (!OK) {
+				$('#PhoneText').text("fel ");
+				knapp=false;
+				$('.test').remove();
+			}
+			else{
+
+				$('#PhoneText').text("ok");
+				if(knapp==false)
+				{
+				$('#PhoneText').after($('<input class="test" type="button" value="test">'));
+
+				}
+				knapp=true;
+				}
+			});
+      var knapp=false;
+      $("#Email").keyup(function(){
+
+        var re = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])";
+        var OK = re.exec($('#Email').val());
+
+        if (!OK) {
+          $('#EmailText').text("fel ");
+          knapp=false;
+          $('.test').remove();
+        }
+        else{
+
+          $('#EmailText').text("ok");
+          if(knapp==false)
+          {
+          $('#EmailText').after($('<input class="test" type="button" value="test">'));
+
+          }
+          knapp=true;
+          }
+        });
+
+		/*$( ".test" ).click(function() {
+			$('#sendshit').submit();
+		});
+		*/
+
+		$(document).on('click', '.test', function(){
+			$('#sendshit').submit();
+
+
+		});
+
+	});
+
+	</script>
+  </head>
+  <body>
+
+    <form action="#" method="get" id ="sendshit" >
+			<fieldset>
+				<legend>Sign up</legend>
+
+					<p>
+					  <label for="username">
+						<span>Username </span>
+						<input type="text" id="Username" name="User" required />
+						<strong><abbr title="måste fyllas i">*</abbr></strong>
+						 <span id ="text"></span>
+					  </label>
+					</p>
+          <p>
+					  <label for="password">
+						<span>Password </span>
+						<input type="text" id="Password" name="UserPassword" required />
+						<strong><abbr title="måste fyllas i">*</abbr></strong>
+						 <span id ="text"></span>
+					  </label>
+					</p>
+          <p>
+					  <label for="confirmPassword">
+						<span>Confirm passowrd </span>
+						<input type="text" id="ConfirmPassword" name="ConPassword" required />
+						<strong><abbr title="måste fyllas i">*</abbr></strong>
+						 <span id ="text"></span>
+					  </label>
+					</p>
+          <p>
+					  <label for="Email">
+						<span>Email address </span>
+						<input type="text" id="Email" name="Email" required />
+						<strong><abbr title="måste fyllas i">*</abbr></strong>
+						 <span id ="EmailText"></span>
+					  </label>
+					</p>
+          <p>
+					  <label for="Phone">
+						<span>Phone number </span>
+						<input type="text" id="Phone" name="Tele" required />
+						<strong><abbr title="måste fyllas i">*</abbr></strong>
+						 <span id ="PhoneText"></span>
+					  </label>
+					</p>
+
+        <input type="submit" name="sub" value="Sign up">
+
+</fieldset>
+
+  </body>
+</html>

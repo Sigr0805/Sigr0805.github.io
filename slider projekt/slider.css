@@ -1,0 +1,28 @@
+#window{
+
+  height:200px;
+  width:200px;
+  overflow:hidden;
+  position:relative;
+
+}
+
+#imgs{
+  position:relative;
+  display:flex;
+  z-index:-100;
+
+}
+#left{
+  height:200px;
+  width:100px;
+  position:absolute;
+
+}
+#right{
+
+  height:200px;
+  width:100px;
+  position:absolute;
+  left:108px;
+}

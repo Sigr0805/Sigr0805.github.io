@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="slider.css">
+  </head>
+  <body>
+
+<div id="window">
+
+            <div id="left">
+
+            </div>
+            <div id="right">
+
+            </div>
+
+    <div id="imgs">
+
+
+
+      <img class="image" src="200x200katt.png" alt="200x200katt.png">
+      <img class="image" src="200x200K-on!.jpg" alt="200x200K-on!.jpg">
+      <img class="image" src="200x200yoda.jpeg" alt="200x200yoda.jpeg">
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var timer = setInterval(timer_funktion, 2000);
+var image_count = 3;
+image_index = 1;
+
+function timer_funktion(){
+  if(image_index == image_count){
+    $("#imgs").animate({
+      right: "-=400px"
+    });
+
+    image_index = image_index - 2;
+    console.log(image_index);
+  }
+
+  if(image_index < image_count ){
+    $("#imgs").animate({
+      right: "+=200px"
+    });
+    image_index = image_index + 1;
+    console.log(image_index);
+  }
+
+}
+
+  $("#left").click(function(){
+    if(image_index > 1){
+      $("#imgs").animate({
+        right: "-=200px"
+      });
+
+      image_index = image_index - 1;
+      console.log(image_index);
+    }
+
+  });
+
+  $("#right").click(function(){
+
+    if(image_index < image_count ){
+      $("#imgs").animate({
+        right: "+=200px"
+      });
+      image_index = image_index + 1;
+      console.log(image_index);
+    }
+  });
+
+
+
+
+</script>
+
+
+  </body>
+</html>
