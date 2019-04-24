@@ -1,0 +1,141 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  grid-area: menu;
+
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  background-color: #0C4767;
+  top: 0;
+  position:fixed;
+  display: flex;
+  flex-direction: row;
+}
+Title{
+  width: 20%;
+  padding:20px;
+  margin:10px;
+}
+#Hbutton{
+  width: 20%;
+  padding: 20px;
+  margin: 2px;
+  background-color: #B9A44C;
+  border-radius: 40px;
+  text-align: center;
+}
+#Fbutton{
+  width: 20%;
+  padding: 20px;
+  margin: 2px;
+  background-color: #B9A44C;
+  border-radius: 40px;
+  text-align: center;
+}
+#Mbutton{
+  width: 20%;
+  padding: 20px;
+  margin: 2px;
+  background-color: #B9A44C;
+  border-radius: 40px;
+  text-align: center;
+}
+
+header{
+
+  grid-area: header;
+  height: 1000px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 120px;
+  background-color: #FE9920;
+}
+#verksamhet{
+  height: 80%;
+  width: 80%;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+main{
+  grid-area: main;
+  height: 1000px;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+
+  background-color: #566E3D;
+  display: flex;
+  flex-direction: column;
+
+}
+#fredag{
+  height: 10%;
+  width: 80%;
+  padding: 2px;
+  margin-top: 80px;
+  text-align: left;
+}
+#merfredag{
+  height: 80%;
+  width: 80%;
+  padding: 2px;
+  margin-top: 80px;
+  text-align: left;
+}
+
+footer{
+  grid-area: footer;
+
+  height: 600px;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  background-color:  #FA7921;
+  top: 0;
+}
+#kontakta{
+  height: 80%;
+  width: 80%;
+  padding: 2px;
+  margin-top: 80px;
+  text-align: left;
+}
+
+#BildHampus{
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+}
+
+.Hampus {
+  position: static;
+  height: calc(1181vw / 100);
+  width: calc(3708vw / 100);
+
+  padding: 0;
+  margin:0;
+}
+
+
+
+
+
+.grid-container {
+  height:100%;
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "header header header header header header"
+    "main main main main main main"
+    "footer footer footer footer footer footer"
+    ;
+}
