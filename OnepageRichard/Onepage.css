@@ -17,11 +17,12 @@ nav{
   display: flex;
   flex-direction: row;
 }
-Title{
+#Title{
   width: 20%;
-  padding:20px;
-  margin:10px;
+  padding:10px;
+  margin: 3px;
   background-color: #B9A44C;
+  text-align: center;
 }
 #Hbutton{
   width: 20%;
